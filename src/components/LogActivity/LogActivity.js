@@ -1,16 +1,14 @@
 import React, { useState, useContext } from "react";
-import { ActivityContext } from "../../Context/ActivityContext"; // Adjust the path accordingly
+import { ActivityContext } from "../../Context/ActivityContext";
 import mets from "../../Data/mets copy.json";
 import { useNavigate } from "react-router-dom";
-import { StepsContext } from "../../Context/StepContext"; // Import StepsContext
 import "./LogActivity.css";
 
 const LogActivity = () => {
-  const { Log } = useContext(ActivityContext);
-  const { logActivityCalories } = useContext(StepsContext); // Access the context function
+  const { logActivity } = useContext(ActivityContext);
   const [selectedActivity, setSelectedActivity] = useState("");
   const [selectedMotion, setSelectedMotion] = useState("");
-  const [durationInMinutes, setDurationInMinutes] = useState(""); // State for duration in minutes
+  const [durationInMinutes, setDurationInMinutes] = useState("");
 
   const navigate = useNavigate();
 
@@ -23,10 +21,10 @@ const LogActivity = () => {
   };
 
   const handleDurationChange = (event) => {
-    setDurationInMinutes(event.target.value); // Update duration in minutes state
+    setDurationInMinutes(event.target.value);
   };
 
-  const activities = mets; // Using the flat array directly
+  const activities = mets;
 
   const filteredMotions = activities.filter(
     (item) => item.activity === selectedActivity
@@ -39,28 +37,20 @@ const LogActivity = () => {
           item.activity === selectedActivity && item.motion === selectedMotion
       );
 
-      const durationInHours = Number((durationInMinutes / 60).toFixed(2)); // Convert minutes to hours
-      const caloriesBurned = selectedItem
-        ? selectedItem.met * durationInHours
-        : 0; // Calculate calories burned
-
+      const durationInHours = Number((durationInMinutes / 60).toFixed(2));
       const activityToLog = {
         activity: selectedActivity,
         motion: selectedMotion,
-        met: selectedItem ? selectedItem.met : null, // Get the MET value
-        duration: durationInHours, // Duration in hours
+        met: selectedItem ? selectedItem.met : null,
+        duration: durationInHours,
       };
 
-      console.log(activityToLog);
-      Log(activityToLog); // Log the activity
+      const currentDate = new Date().toISOString().split("T")[0];
+      logActivity(activityToLog, currentDate);
 
-      // Log the calories burned in the StepsContext
-      // logActivityCalories(caloriesBurned);
-
-      // Optionally reset selections
       setSelectedActivity("");
       setSelectedMotion("");
-      setDurationInMinutes(""); // Reset duration
+      setDurationInMinutes("");
 
       navigate("/");
     }

@@ -9,6 +9,7 @@ import UserStats from "./components/UserStats/UserStats";
 import { ActivityProvider } from "./Context/ActivityContext";
 import { UserProvider } from "./Context/UserContext";
 import { StepsProvider } from "./Context/StepContext";
+import "react-datepicker/dist/react-datepicker.css";
 
 function App() {
   return (

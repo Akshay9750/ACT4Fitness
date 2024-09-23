@@ -1,10 +1,8 @@
 .user-stats-container {
-  background-color: #f9f9f9; /* Light background color */
+  max-width: 600px;
+  margin: 0 auto;
   padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 400px;
-  margin: auto; /* Center the container */
+  font-family: Arial, sans-serif;
 }
 
 .user-stats-form {
@@ -12,34 +10,204 @@
   flex-direction: column;
 }
 
+.user-stats-form h1,
+.user-details h1 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
 .user-stats-form label {
   margin-top: 10px;
-  font-weight: bold;
+  color: #555;
 }
 
 .user-stats-form input {
-  padding: 10px;
-  border: 1px solid #ccc;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
   border-radius: 4px;
-  margin-bottom: 10px;
 }
 
-.user-stats-form button {
+.user-stats-form button,
+.delete-user-button {
+  margin-top: 20px;
   padding: 10px;
-  background-color: #007bff; /* Bootstrap primary color */
+  background-color: #4caf50;
   color: white;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  font-size: 16px;
 }
 
 .user-stats-form button:hover {
-  background-color: #0056b3; /* Darker shade on hover */
+  background-color: #45a049;
 }
 
 .user-details {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.user-details p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.delete-user-button {
+  background-color: #ff4d4d;
+}
+
+.delete-user-button:hover {
+  background-color: #ff3333;
+}
+
+.confirm-delete-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.confirm-delete-modal p {
+  margin-bottom: 20px;
+}
+
+.confirm-delete-modal button {
+  margin-right: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.confirm-delete-modal button:first-of-type {
+  background-color: #ff4d4d;
+  color: white;
+}
+
+.confirm-delete-modal button:last-of-type {
+  background-color: #f0f0f0;
+}
+.home-button {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.home-button:hover {
+  background-color: #45a049;
+}
+
+/* Existing styles... */
+
+.user-stats-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.user-stats-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-stats-form h1,
+.user-details h1 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.user-stats-form label {
+  margin-top: 10px;
+  color: #555;
+}
+
+.user-stats-form input {
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.user-stats-form button,
+.delete-user-button {
   margin-top: 20px;
   padding: 10px;
-  background-color: #e9ecef; /* Light gray background for details */
+  background-color: #4caf50;
+  color: white;
+  border: none;
   border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.user-stats-form button:hover {
+  background-color: #45a049;
+}
+
+.user-details {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.user-details p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.delete-user-button {
+  background-color: #ff4d4d;
+}
+
+.delete-user-button:hover {
+  background-color: #ff3333;
+}
+
+.confirm-delete-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.confirm-delete-modal p {
+  margin-bottom: 20px;
+}
+
+.confirm-delete-modal button {
+  margin-right: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.confirm-delete-modal button:first-of-type {
+  background-color: #ff4d4d;
+  color: white;
+}
+
+.confirm-delete-modal button:last-of-type {
+  background-color: #f0f0f0;
 }
