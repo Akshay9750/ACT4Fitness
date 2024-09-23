@@ -1,0 +1,88 @@
+.home-page {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.header {
+  text-align: center;
+  background-color: #4caf50; /* Header background color */
+  color: white;
+  padding: 15px 0;
+  border-radius: 10px;
+}
+
+.navigation {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.navigation a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #4caf50; /* Link color */
+  font-weight: bold;
+}
+
+.activities-section {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #e8f5e9; /* Light green background */
+  border-radius: 10px;
+}
+
+.activities-title {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #4caf50;
+}
+
+.activities-divider {
+  height: 2px;
+  background-color: #4caf50;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+.activities-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.activity-card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  flex: 1 1 calc(33% - 15px);
+  transition: transform 0.3s;
+}
+
+.activity-card:hover {
+  transform: translateY(-5px);
+}
+
+.activity-name {
+  font-size: 1.2em;
+  color: #4caf50;
+  margin-bottom: 5px;
+}
+
+.activity-details {
+  margin: 5px 0;
+}
+
+.activity-calories {
+  font-weight: bold;
+  color: #ff5722; /* Color for calories */
+}
+
+.no-activities {
+  font-style: italic;
+  color: #888;
+}
+
+.progress-dials {
+  margin-top: 20px;
+}

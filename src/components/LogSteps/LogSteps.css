@@ -1,0 +1,58 @@
+/* LogSteps.css */
+.log-steps-container {
+  background-color: #f9f9f9; /* Light background color */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+.log-steps-container h1 {
+  text-align: center;
+  color: #333; /* Darker text for contrast */
+}
+
+.log-steps-container label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #555; /* Slightly lighter for labels */
+}
+
+.log-steps-container input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd; /* Light border */
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.log-steps-container button {
+  background-color: #4caf50; /* Green button */
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%; /* Full-width button */
+  font-size: 16px;
+}
+
+.log-steps-container button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+.log-steps-stats {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.log-steps-stats h2 {
+  color: #333; /* Darker text for stats */
+}
+
+.log-steps-stats p {
+  color: #555; /* Lighter text for stats */
+}

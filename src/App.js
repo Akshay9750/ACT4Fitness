@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import LogActivity from "./components/LogActivity/LogActivity";
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import Homepage from "./components/Homepage/HomaPage";
+import LogActivityPage from "./components/LogActivity/LogActivity";
+import LogSteps from "./components/LogSteps/LogSteps";
+import UserStats from "./components/UserStats/UserStats";
+import { ActivityProvider } from "./Context/ActivityContext";
+import { UserProvider } from "./Context/UserContext";
+import { StepsProvider } from "./Context/StepContext";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ActivityProvider>
+      <UserProvider>
+        <StepsProvider>
+          <Routes>
+            <Route path="/" element={<Homepage />} />
+            <Route path="/log-activity" element={<LogActivityPage />} />
+            <Route path="/log-steps" element={<LogSteps />} />
+            <Route path="/user-stats" element={<UserStats />} />
+          </Routes>
+        </StepsProvider>
+      </UserProvider>
+    </ActivityProvider>
   );
 }
 
