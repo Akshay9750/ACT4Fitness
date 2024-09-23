@@ -1,70 +1,76 @@
-# Getting Started with Create React App
+# Act4Fitness
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Act4Fitness is a React-based web application designed to help users track their fitness activities, monitor daily steps, and manage their fitness goals.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Activity Logging**: Users can log various fitness activities, including the type of activity, duration, and motion.
+- **Step Tracking**: Daily step count can be logged and monitored.
+- **Calorie Burn Calculation**: The app calculates calories burned based on activities and steps.
+- **Progress Visualization**: Visual representation of daily steps and calories burned using progress dials.
+- **Date-based Tracking**: Users can view and manage their fitness data for specific dates.
+- **User Profile Management**: Users can create and manage their fitness profiles, including personal details and fitness goals.
 
-### `npm start`
+## Getting Started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Prerequisites
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Node.js (v12.0.0 or later)
+- npm (v6.0.0 or later)
 
-### `npm test`
+### Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clone the repository:
+   ```
+   git clone https://github.com/yourusername/act4fitness.git
+   ```
 
-### `npm run build`
+2. Navigate to the project directory:
+   ```
+   cd act4fitness
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. Install dependencies:
+   ```
+   npm install
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. Start the development server:
+   ```
+   npm start
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+5. Open [http://localhost:3000](http://localhost:3000) to view the app in your browser.
 
-### `npm run eject`
+## Usage
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. **Create User Profile**: Start by creating your user profile with your name, height, weight, and goal weight.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. **Log Activities**: Use the "Log Activity" page to record your fitness activities.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3. **Track Steps**: Log your daily steps on the "Log Steps" page.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+4. **View Progress**: The homepage displays your progress dials for steps and calories burned.
 
-## Learn More
+5. **Manage Data**: Use the date picker on the homepage to view data for specific dates.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Project Structure
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- `src/components/`: Contains React components for different pages and features.
+- `src/Context/`: Includes React context files for state management.
+- `src/Data/`: Stores any static data files used in the application.
 
-### Code Splitting
+## Technologies Used
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- React
+- React Router
+- Context API for state management
+- react-datepicker for date selection
+- Local Storage for data persistence
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+## Acknowledgments
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Thanks to all contributors who have helped shape Act4Fitness.
+- Special thanks to the React community for their excellent documentation and resources.
